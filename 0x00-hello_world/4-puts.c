@@ -3,7 +3,7 @@
 /**
  * main - Program to test Code
  *
- * Returns: 0 means Success, else 1
+ * Return: 0 means Success, else 1
  */
 int main(void)
 {
