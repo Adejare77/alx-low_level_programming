@@ -14,7 +14,7 @@ void more_numbers(void)
 	{
 		j = 0;
 
-		for (j; j < 15; j++)
+		for (; j < 15; j++)
 		{
 			w = j / 10;
 			r = j % 10;
