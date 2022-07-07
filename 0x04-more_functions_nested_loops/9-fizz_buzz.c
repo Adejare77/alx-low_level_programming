@@ -6,7 +6,7 @@
  *
  * Return: void
  */
-void main(void)
+int main(void)
 {
 	int i = 1;
 
@@ -23,4 +23,7 @@ void main(void)
 		if (i != 100)
 			putchar(' ');
 	}
+	putchar('\n');
+
+	return (0);
 }
