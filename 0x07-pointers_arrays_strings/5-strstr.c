@@ -17,12 +17,14 @@ char *_strstr(char *haystack, char *needle)
 	for (; haystack[j] != '\0'; j++)
 	{
 		if (haystack[j] == needle[0])
+		{
 			k = 0;
 			for (; needle[k] != '\0'; k++)
 				if (needle[k] != (haystack + j)[k])
 					break;
+		}
 		if (i == k)
-			return (haystack + i);
+			return (haystack + j);
 	}
 
 	return ('\0');
