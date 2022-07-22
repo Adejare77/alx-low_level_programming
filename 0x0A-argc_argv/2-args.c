@@ -7,11 +7,11 @@
  *
  * Return: Always 0
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
 	int i = 1;
 
-	for (; argv[i] != NULL; i++)
+	for (; i < argc; i++)
 		printf("%s\n", argv[i]);
 
 	return (0);
