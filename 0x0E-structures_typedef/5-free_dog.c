@@ -2,7 +2,7 @@
 
 /**
  * free_dog - function that frees dogs
- * d: pointer to the dog
+ * @d: pointer to the dog
  *
  * Return: void
  */
