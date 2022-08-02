@@ -14,7 +14,10 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	struct dog *point = d;
 
-	point->name = name;
-	point->age = age;
-	point->owner = owner;
+	if (d)
+	{
+		point->name = name;
+		point->age = age;
+		point->owner = owner;
+	}
 }
