@@ -5,6 +5,8 @@
  * of a list_t list
  * @head: pointer to the head pointer of the node
  * @str: string to be duplicated
+ *
+ * Return: pointer to the new list element
  */
 list_t *add_node(list_t **head, const char *str)
 {
