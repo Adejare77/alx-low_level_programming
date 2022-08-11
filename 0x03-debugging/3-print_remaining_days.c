@@ -43,11 +43,9 @@ void print_remaining_days(int month, int day, int year)
 			printf("Day of the year: %d\n", day);
 			printf("Remaining days: %d\n", number_of_days_in_the_year - day);
 		}
-
 		else
 			printf("Invalid date: %02d/%02d/%04d\n", month, days_in_this_month, year);
 	}
-			
 	else
 		printf("Invalid date: %02d/%02d/%04d\n", month, days_in_this_month, year);
 }
