@@ -11,13 +11,12 @@
 size_t print_list(const list_t *h)
 {
 	size_t node = 0;
-	int i;
 
 	if (h)
 	{
 		while (h != NULL)
 		{
-			if (ptr->str == NULL)
+			if (h->str == NULL)
 				printf("[%d] %s\n", 0, "(nil)");
 			else
 			{
