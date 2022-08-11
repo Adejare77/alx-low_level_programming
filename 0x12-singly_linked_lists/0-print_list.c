@@ -30,6 +30,7 @@ size_t print_list(const list_t *h)
 			}
 			node++;
 			ptr = ptr->next;
+			ptr->len = i;
 		}
 	}
 
