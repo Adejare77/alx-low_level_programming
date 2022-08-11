@@ -8,6 +8,7 @@
 int main(void)
 {
 	list_t *head;
+
 	head = NULL;
 	add_node(&head, "Alexandro");
 	add_node(&head, "Asaia");
