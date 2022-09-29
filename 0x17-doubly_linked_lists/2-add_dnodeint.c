@@ -18,8 +18,16 @@ return (NULL);
 
 new_node->n = n;
 new_node->prev = NULL;
+if (*head)
+{
 new_node->next = *head;
 *head = new_node;
+}
+else
+{
+new_node->next = NULL;
+*head = new_node;
+}
 
 return (new_node);
 }
