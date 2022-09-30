@@ -9,18 +9,18 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-dlistint_t *ptr;
-size_t count = 0;
+	dlistint_t *ptr;
+	size_t count = 0;
 
-if (h)
-{
-ptr = (dlistint_t *) h;
-while (ptr)
-{
-count += 1;
-ptr = ptr->next;
-}
-}
+	if (h)
+	{
+		ptr = (dlistint_t *) h;
+		while (ptr)
+		{
+			count += 1;
+			ptr = ptr->next;
+		}
+	}
 
-return (count);
+	return (count);
 }
