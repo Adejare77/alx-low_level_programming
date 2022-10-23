@@ -10,18 +10,19 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    hash_node_t *ptr;
-    long unsigned int index;
+	hash_node_t *ptr;
+	unsigned long int index;
 
-    if (ht)
-    {
-        index = key_index((const unsigned char *)key, ht->size);
-        if (!(ht->array[index]))
-            return (NULL);
-        ptr = ht->array[index];
-        while (ptr->next && (ptr->key != (char *)key))
-            ptr = ptr->next;
-        return (ptr->value);
-    }
-    return (NULL);
+	if (ht)
+	{
+		index = key_index((const unsigned char *)key, ht->size);
+		if (!(ht->array[index]))
+			return (NULL);
+		ptr = ht->array[index];
+		while (ptr->next && (ptr->key != (char *)key))
+			ptr = ptr->next;
+		return (ptr->value);
+	}
+
+	return (NULL);
 }

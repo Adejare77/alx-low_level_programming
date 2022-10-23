@@ -12,9 +12,9 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-    unsigned long int h_k;
+	unsigned long int h_k;
 
-    h_k = hash_djb2(key) % size; /* division method to give index. */
+	h_k = hash_djb2(key) % size;
 
-    return (h_k);
+	return (h_k);
 }
