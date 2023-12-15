@@ -13,7 +13,7 @@
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int ht_key_idx_pos, count = 1;
+	unsigned long int ht_key_idx_pos, check = 1;
 	char *key_dup = (char *)strdup(key);
 	char *val_dup = (char *)strdup(value);
 	hash_node_t *element = NULL, *tmp = NULL, *prev_val_hldr = NULL;
@@ -29,7 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		element->next = NULL;
 		tmp = (ht->array)[ht_key_idx_pos];
 		prev_val_hldr = tmp;
-		while (tmp)  /* checks if it an update. if yes: count = 0, else 1*/
+		while (tmp)  /* checks if it an update. if yes: check = 0, else 1*/
 		{
 			if (strcmp(tmp->key, key) == 0)
 			{
@@ -38,17 +38,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 					(ht->array)[ht_key_idx_pos] = element;
 				else
 					prev_val_hldr->next = element;
-				count = 0;
+				check = 0;
 				free(tmp->key);
 				free(tmp->value);
 				free(tmp);
 			}
 			prev_val_hldr = tmp;
-			tmp = tmp->next;
+			tmp = tmp ? tmp->next : NULL;
 		}
-		if (count && (ht->array)[ht_key_idx_pos])
+		if (check && (ht->array)[ht_key_idx_pos])
 			element->next = (ht->array)[ht_key_idx_pos];
-		if (count)
+		if (check)
 			(ht->array)[ht_key_idx_pos] = element;
 		return (1);
 	}
