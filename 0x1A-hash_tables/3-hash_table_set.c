@@ -86,7 +86,7 @@ unsigned long int key_idx)
 			free(tmp);
 		}
 		prev_val_hldr = tmp;
-		tmp = tmp->next;
+		tmp = tmp ? tmp->next: NULL;
 	}
 
 	return (check);
