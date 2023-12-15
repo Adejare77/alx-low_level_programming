@@ -1,20 +1,20 @@
 #include "hash_tables.h"
 
 /**
- * key_index - function that gives you the index of a key
- * @size: sizse of the array of the hash table
- * @key: the key or item
+ * key_index - gives the index of a key
+ * @key: the key to find its index
+ * @size: size of the array of the hash table
  *
- * Return: the index at which the key/value pair should be
- * stored in the array of the hash table
+ * Return: the index at which the key/value pair should be stored
+ * in the array of the hash table
  *
- * Description: The function should use the hash_djb2 function written earlier.
- */
+ * Description: This function should use the hash_dbj2 function
+*/
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	unsigned long int h_k;
+	unsigned long int h_i;
+	/*Hash index gives the remainder after division*/
+	h_i = hash_djb2(key) % size;
 
-	h_k = hash_djb2(key) % size;
-
-	return (h_k);
+	return (h_i);
 }
