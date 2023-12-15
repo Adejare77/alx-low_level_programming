@@ -1,9 +1,9 @@
-#ifndef _HASH_
-#define _HASH_
+#ifndef _hash_table_
+#define _hash_table_
 
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -25,8 +25,8 @@ typedef struct hash_node_s
  *
  * @size: The size of the array
  * @array: An array of size @size
- * Each cell of this array is a pointer to the first node of a linked
- * list, because we want our HashTable to use a Chaining collision handling
+ * Each cell of this array is a pointer to the first node of a linked list,
+ * because we want our HashTable to use a Chaining collision handling
  */
 typedef struct hash_table_s
 {
@@ -39,5 +39,7 @@ unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
+void hash_table_print(const hash_table_t *ht);
+void hash_table_delete(hash_table_t *ht);
 
-#endif /* ends _HASH_ */
+#endif
