@@ -79,9 +79,12 @@ unsigned long int key_idx)
 			else
 				prev_val_hldr->next = element;
 			check = 0;
+			free(tmp->key);
+			free(tmp->value);
+			free(tmp);
 		}
 		prev_val_hldr = tmp;
-		tmp = tmp ? tmp->next : NULL;
+		tmp = tmp->next;
 	}
 
 	return (check);
