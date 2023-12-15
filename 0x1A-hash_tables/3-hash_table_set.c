@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht_key_idx_pos = key_index((const unsigned char *)key, ht->size);
 		element = malloc(sizeof(hash_node_t));
 
-		if (!element || !val_dup || !key_dup)
+		if (!element || !val_dup)
 			return (0);
 
 		element->key = key_dup;
@@ -40,6 +40,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				else
 					prev_val_hldr->next = element;
 				check = 0;
+				free(tmp->key);
+				free(tmp->value);
+				free(tmp);
 			}
 			prev_val_hldr = tmp;
 			tmp = tmp->next;
