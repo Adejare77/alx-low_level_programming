@@ -32,7 +32,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		prev_val_hldr = tmp;
 		while (tmp)
 		{
-			if (strcmp(tmp->key, element->key) == 0)
+			if (strcmp(tmp->key, key) == 0)
 			{
 				element->next = tmp->next;
 				if (prev_val_hldr == tmp)
