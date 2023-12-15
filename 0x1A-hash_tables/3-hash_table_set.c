@@ -40,9 +40,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				else
 					prev_val_hldr->next = element;
 				check = 0;
-				free(tmp->key);
-				free(tmp->value);
-				free(tmp);
 			}
 			prev_val_hldr = tmp;
 			tmp = tmp->next;
