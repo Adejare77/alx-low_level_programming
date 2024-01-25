@@ -11,7 +11,7 @@
 CC = gcc	# CC = gcc i.e = is same as :=
 SRC = $(wildcard *.c) # SRC = main.c school.c
 OBJ = $(SRC:.c=.o)	# An implicit rule that convers all .c to .o
-NAME := school
+NAME = school
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
