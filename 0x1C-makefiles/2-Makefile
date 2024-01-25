@@ -9,7 +9,7 @@
 # You are not allowed to have a list of all the .o files
 
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
