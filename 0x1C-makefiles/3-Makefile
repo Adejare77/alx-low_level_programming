@@ -17,7 +17,7 @@
 # You are not allowed to have a list of all the .o files
 
 CC = gcc
-SRC = main.c school.c # SRC = $(wildcard *.c)
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
