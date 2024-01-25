@@ -8,7 +8,7 @@ def island_perimeter(grid):
     overlapped_perimeter = 0
     island = 0
     for v in range(len(grid)):
-        for h in grid[v]:
+        for h in range(len(grid[v])):
             if (v != 0 and grid[v - 1][h] == 1):
                 overlapped_perimeter += 1
             if (h != 0 and grid[v][h - 1] == 1):
