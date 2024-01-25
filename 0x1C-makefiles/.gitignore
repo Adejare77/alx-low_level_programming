@@ -3,4 +3,4 @@ m.h
 school.c
 5-main.py
 .vscode/
-pycache
+__pycache__/
