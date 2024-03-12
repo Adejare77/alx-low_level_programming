@@ -17,7 +17,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t lw_blk_lim;
 	size_t up_blk_lim;
 
-	if (!array || size <= 0)
+	if (!array)
 		return (-1);
 
 	blk_idx = (size_t)sqrt(size);
@@ -27,8 +27,7 @@ int jump_search(int *array, size_t size, int value)
 	{
 		up_blk_lim = (count * blk_idx);
 		printf("Value checked array[%ld] = [%d]\n", lw_blk_lim, array[lw_blk_lim]);
-		if ((array[(int)(up_blk_lim)] >= value && array[(int)lw_blk_lim] <= value)
-		|| ((up_blk_lim >= size) && array[(int)lw_blk_lim] <= value))
+		if (array[(int)(up_blk_lim)] >= value || (up_blk_lim >= size))
 		{
 			printf("Value found between indexes [%ld] and [%ld]\n",
 			lw_blk_lim, up_blk_lim);
