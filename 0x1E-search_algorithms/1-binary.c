@@ -9,7 +9,6 @@
  *
  * Return: index where value is located, else -1 if not present
 */
-int bin_search_algo(int *array, size_t low, size_t high, int value);
 
 int binary_search(int *array, size_t size, int value)
 {
