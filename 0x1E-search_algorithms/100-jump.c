@@ -17,7 +17,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t lw_blk_lim;
 	size_t up_blk_lim;
 
-	if (!array)
+	if (!array || size <= 0)
 		return (-1);
 
 	blk_idx = (size_t)sqrt(size);
