@@ -26,8 +26,8 @@ int interpolation_search(int *array, size_t size, int value)
 }
 
 /**
- * interpolation_algo - using algorithm to searche for a value in a sorted array of
- * integers using the `interpolation search algorithm`
+ * interpolation_algo - using algorithm to searche for a value in
+ * a sorted array of integers using the `interpolation search algorithm`
  * @array: pointer to the first element of the array to search in
  * @low: the lowest position of the array to search from
  * @high: highest position of the array to search from
