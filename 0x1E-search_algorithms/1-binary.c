@@ -34,7 +34,8 @@ int binary_search(int *array, size_t size, int value)
 */
 int bin_search_algo(int *array, size_t low, size_t high, int value)
 {
-	size_t mid = (low + high) % 2 == 0 ? (low + high) / 2 : ((low + high) / 2) + 1;
+	size_t mid = (low + high) % 2 == 0 ? (low + high) / 2 : ((
+		low + high) / 2) + 1;
 	size_t index = low;
 
 	if (low < high)

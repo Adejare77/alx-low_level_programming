@@ -25,9 +25,20 @@ int interpolation_search(int *array, size_t size, int value)
 	return (idx);
 }
 
+/**
+ * interpolation_algo - using algorithm to searche for a value in a sorted array of
+ * integers using the `interpolation search algorithm`
+ * @array: pointer to the first element of the array to search in
+ * @low: the lowest position of the array to search from
+ * @high: highest position of the array to search from
+ * @value: the value to search for
+ *
+ * Return: first index where value is located, else -1 if not present
+*/
 int interpolation_algo(int *array, size_t low, size_t high, int value)
 {
-	size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
+	size_t pos = low + (((double)(high - low) /
+	(array[high] - array[low])) * (value - array[low]));
 
 	if (pos > high || pos < 0)
 	{
@@ -41,7 +52,7 @@ int interpolation_algo(int *array, size_t low, size_t high, int value)
 		{
 			while (pos > low && array[pos - 1] == value)
 				pos--;
-			return pos;
+			return (pos);
 		}
 		else if (array[pos] > value)
 			return (interpolation_algo(array, low, pos - 1, value));
