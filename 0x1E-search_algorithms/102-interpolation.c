@@ -40,7 +40,7 @@ int interpolation_algo(int *array, size_t low, size_t high, int value)
 	size_t pos = low + (((double)(high - low) /
 	(array[high] - array[low])) * (value - array[low]));
 
-	if (pos > high || pos < 0)
+	if (pos > high || pos < low)
 	{
 		printf("Value checked array[%ld] is out of range\n", pos);
 		return (-1);
