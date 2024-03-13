@@ -17,6 +17,7 @@ int advanced_binary(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
+	/* using size instead of index */
 	index = adv_bin_search_algo(array, 0, size, value);
 	return (index);
 }
@@ -33,6 +34,7 @@ int advanced_binary(int *array, size_t size, int value)
 */
 int adv_bin_search_algo(int *array, size_t low, size_t high, int value)
 {
+	/* Effect of using size instead of index */
 	size_t mid = (low + high) % 2 == 0 ? (low + high) / 2 : ((
 		low + high) / 2) + 1;
 	size_t index = low;
