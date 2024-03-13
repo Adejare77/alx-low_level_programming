@@ -1,8 +1,8 @@
 #include "search_algos.h"
 
 /**
- * advanced_binary_search - function that searches for a value in a sorted array of
- * integers using the `Binary search algorithms`
+ * advanced_binary - function that searches for a value in a
+ * sorted array of integers using the `Binary search algorithms`
  * @array: pointer to the first element of the array to search in
  * @size: is the number of elements in array
  * @value: is the value to search for

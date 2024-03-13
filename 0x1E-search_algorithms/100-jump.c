@@ -23,7 +23,7 @@ int jump_search(int *array, size_t size, int value)
 	blk_idx = (size_t)sqrt(size);
 	lw_blk_lim = 0;
 
-	while (lw_blk_lim < size)
+	while (lw_blk_lim <= size)
 	{
 		up_blk_lim = (count * blk_idx);
 		printf("Value checked array[%ld] = [%d]\n", lw_blk_lim, array[lw_blk_lim]);

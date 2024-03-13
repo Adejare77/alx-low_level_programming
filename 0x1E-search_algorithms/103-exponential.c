@@ -29,7 +29,7 @@ int exponential_search(int *array, size_t size, int value)
 		if (array[next_exp] >= value || next_exp == size - 1)
 		{
 			printf("Value found between indexes [%ld] and [%ld]\n", count, next_exp);
-			/* I decided to use index instead of size */
+			/* using index instead of size */
 			return (exp_bin_search_algo(array, count, next_exp, value));
 		}
 		count *= 2;
