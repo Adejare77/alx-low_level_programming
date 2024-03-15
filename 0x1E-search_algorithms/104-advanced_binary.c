@@ -14,7 +14,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int index;
 
-	if (!array)
+	if (!array  || size <= 0)
 		return (-1);
 
 	/* using index instead of size*/
@@ -51,7 +51,7 @@ int adv_bin_search_algo(int *array, size_t low, size_t high, int value)
 			return (mid);
 		}
 		else if (array[mid] > value)
-			return (adv_bin_search_algo(array, low, mid - 1, value));
+			return (adv_bin_search_algo(array, low, mid, value));
 		else
 			return (adv_bin_search_algo(array, mid + 1, high, value));
 	}
