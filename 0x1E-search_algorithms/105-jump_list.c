@@ -14,7 +14,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	listint_t *temp, *prev_temp;
 	size_t jump_idx = sqrt(size);
-	size_t current_idx = jump_idx, prev_idx, idx;
+	size_t current_idx = jump_idx, prev_idx = 0, idx;
 
 	if (!list || size <= 0)
 		return (NULL);
@@ -22,10 +22,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	temp = prev_temp = list;
 	while (temp && current_idx <= size)
 	{
-		prev_idx = current_idx - jump_idx;
 		idx = prev_idx;
-		if (current_idx == size)
-			current_idx = size - 1;
 		while (idx < current_idx && temp)
 		{
 			temp = temp->next;
@@ -48,7 +45,10 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			return (NULL);
 		}
 		prev_temp = temp;
+		prev_idx = current_idx;
 		current_idx += jump_idx;
+		if (current_idx >= size)
+			current_idx = size - 1;
 	}
 	return (NULL);
 }
